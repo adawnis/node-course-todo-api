@@ -25,17 +25,17 @@ console.log('Connected to MongoDB server');
 //     console.log(JSON.stringify(result.ops, undefined, 2));
 // });
 
-// db.collection ('Users').insertOne({
-//     name: 'Ukachi Uche',
-//     age: 23,
-//     location: 'lagos'
-// }, (err, result) => {
-//     if (err) {
-//         return console.log('Unable to insert user', err);
-//     }
+db.collection ('Users').insertOne({
+    name: 'Ukachi Uche',
+    age: 23,
+    location: 'lagos'
+}, (err, result) => {
+    if (err) {
+        return console.log('Unable to insert user', err);
+    }
 
-//     console.log(result.ops[0]._id.getTimestamp());
-// });
+    console.log(result.ops[0]._id.getTimestamp());
+});
 
 db.close();
 });
